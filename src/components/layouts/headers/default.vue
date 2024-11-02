@@ -8,7 +8,7 @@ const props = defineProps<Props>()
 
 <template>
   <div class="header">
-    <img :src="avatar" class="header-logo"/>
+    <img :src="avatar" class="header-logo" width="auto"/>
     <h1 class="header-title">
         {{title}}
     </h1>
@@ -20,21 +20,27 @@ const props = defineProps<Props>()
 .header {
   width: 100%;
   display: flex;
-  gap: $logo-size-sm;
+  gap: $layout-p-sm;
+  background-color: $primary-color;
+  border-left: 1px solid;
+  border-top-left-radius: 120px;
   @media (min-width: $md) {
-    gap: $logo-size-md;
+    gap: $layout-p-md;
   }
   @media (min-width: $lg) {
-    gap: $logo-size-lg;
+    gap: $layout-p-lg;
   }
   @media (min-width: $xl) {
-    gap: $logo-size-xl;
+    gap: $layout-p-xl;
   }
 }
 .header-logo {
-  display: block;
+  display: flex;
+  transform: rotate(180deg);
+  height: 100%;
+  align-items: center;
   width: $logo-size-sm;
-  height: 0px;
+  height: 100%;
   @media (min-width: $md) {
     width: $logo-size-md;
   }
@@ -46,18 +52,23 @@ const props = defineProps<Props>()
   }
 }
 .header-title {
-  padding: 10px 0;
-  color: #272727;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  color: $text-color;
+  background-color: $secondary-color;
+  font-family: "GeistMono", sans-serif;
+  line-height: 1.25rem;
+  font-weight: 400;
   font-size: 14px;
+  padding: 0 20px;
   @media (min-width: $md) {
     font-size: 18px;
   }
   @media (min-width: $lg) {
-    font-size: 22px;
+    font-size: 24px;
   }
   @media (min-width: $xl) {
-    font-size: 24px;
+    font-size: 28px;
   }
 }
 </style>
