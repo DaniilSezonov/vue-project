@@ -22,12 +22,12 @@ import DefaultHeader from "@/components/layouts/headers/default.vue";
         position: relative;
         z-index: 10;
         display: grid;
-        padding: $layout-p-sm;
+        padding: 0 $layout-p-sm;
         @media (min-width: $lg) {
-            padding: $layout-p-lg;
+            padding: 0 $layout-p-lg;
         }
         @media (min-width: $xl) {
-            padding: $layout-p-xl;
+            padding: 0 $layout-p-xl;
         }
     }
     .background {

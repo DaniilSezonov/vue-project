@@ -60,14 +60,19 @@
     .weather-temp {
         display: flex;
         align-items: center;
-        font-size: 1.75em;
         gap: 4px;
         justify-content: center;
+        @media (min-width: $sm) {
+            font-size: 1.25em;
+            gap: 6px;
+        }
         @media (min-width: $lg) {
             font-size: 2.25em;
+            gap: 8px;
         }
         @media (min-width: $xl) {
             font-size: 3.25em;
+            gap: 10px;
         }
     }
     .weather-value {
@@ -77,6 +82,15 @@
         font-weight: 700;
     }
     .weather-current-datetime {
-        font-size: 1.5em;
+        text-align: center;
+        @media (min-width: $sm) {
+            font-size: 1.25em;
+        }
+        @media (min-width: $lg) {
+            font-size: 2.25em;
+        }
+        @media (min-width: $xl) {
+            font-size: 3.25em;
+        }
     }
 </style>

@@ -34,8 +34,7 @@ const props = defineProps<Props>()
 .header-logo {
   display: block;
   width: $logo-size-sm;
-  height: 100%;
-  width: fit-content;
+  height: 0px;
   @media (min-width: $md) {
     width: $logo-size-md;
   }
@@ -47,6 +46,8 @@ const props = defineProps<Props>()
   }
 }
 .header-title {
+  padding: 10px 0;
+  color: #272727;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 14px;
   @media (min-width: $md) {
@@ -56,7 +57,7 @@ const props = defineProps<Props>()
     font-size: 22px;
   }
   @media (min-width: $xl) {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 </style>
